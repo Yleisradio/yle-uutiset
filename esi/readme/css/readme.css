@@ -1,0 +1,36 @@
+#esi-readme {
+	clear: both;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#esi-readme > pre {
+	background: url(../bg/pattern.png);
+	font-family: courier new;
+	color: #00FF08;
+	margin-bottom: 20px;
+	padding: 15px;
+	overflow-x: auto;
+}
+
+@media screen and (min-width: 480px) {
+	#esi-readme > pre {
+		color: #05F6FF;
+	}	
+}
+
+@media screen and (min-width: 767px) {
+	#esi-readme > pre {
+		color: #FFFA00;
+	}
+}
+@media screen and (min-width: 980px) {
+	#esi-readme > pre {
+		color: #FF00B6;
+	}
+}
+@media screen and (min-width: 1260px) {
+	#esi-readme > pre {
+		color: #fff;
+	}
+}

@@ -1,0 +1,56 @@
+<div id="esi-readme">
+  <h3>HTML</h3>
+  <p>Wräppää upotettava merkkaus yhden elementin sisään. Anna elementille id, joka on muotoa esi-toteutuksen-nimi. Esimerkiksi näin:</p>
+
+<pre>&lt;div id="esi-testi"&gt;
+&lt;/div&gt;</pre>
+
+  <h3>Javascript</h3>
+  <p>Käytämme tällä hetkellä <a target="_blank" href="http://yle.fi/uutiset/resources/js/jquery-1.9.0.js">jQueryn 1.9-versiota</a>. Älä lataa upotuksen mukana uudempaa tai vanhempaa versiota, sillä se voi rikkoa palvelun omat komponentit. Voit käyttää toteutuksessa harkiten <a target="_blank" href="http://yle.fi/uutiset/resources/js/jquery.cookie.js">Cookie</a>- ja <a target="_blank" href="http://yle.fi/uutiset/resources/js/jquery.ba-hashchange.min.js">hashchange</a>-plugaria. Käytä jQueryä seuraavan esimerkin mukaisesti:</p>
+<pre>window.esiTesti = window.esiTesti || {};
+window.esiTesti.init = function() {
+  $(function() {
+    var $esiTesti = $('#esi-testi');
+    $esiTesti.append('&lt;p&gt;jQuery '+$(this).jquery+'&lt;/p&gt;')
+  });
+};
+esiTesti.init(jQuery);</pre>
+
+  <h3>CSS</h3>
+  
+  <p>Voit käyttää skaalautuvuuden toteuttamiseen media queryn min-width -ominaisuutta arvoilla 480px, 767px, 980px ja 1260px. Aloita jokainen selektori toteutuksesi id:llä, esimerkiksi näin:</p>
+
+  <pre>#esi-testi {
+  clear: both;
+  margin-bottom: 20px;
+  position: relative;
+}
+#esi-testi > p {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
+@media screen and (min-width: 980px) {
+  #esi-testi > p {
+    background: #333;
+  } 
+}</pre>
+  <h3>Hakemistorakenne ja nimeämiskäytäntö</h3>
+  <p>Nimeä toteutuksen juurikansio ja HTML-tiedosto toteutuksen nimellä. Lajittele taustakuva-, CSS-, Javascript- ja kuvatiedostot omiin kansioihin seuraavan esimerkin mukaisesti:</p>
+<pre>
+testi
+ |––testi.html
+ |––bg
+ |––css
+ |   |--testi.css
+ |––img
+ |––js
+ |   |--testi.js
+</pre>
+<h3>Vaatimukset ennen julkaisua</h3>
+<ul>
+  <li>Toteutus skaalautuu mobiilileveyksistä desktopleveyksiin.</li>
+  <li>Toteutus toimii vähintään IE:n 7-9 -versioilla sekä uusimmalla Firefox-, Chrome- ja Safari-selaimella.</li>
+  <li>Toteutus toimii myös kosketusnäytöllä, esimerkiksi iPadillä.</li>
+</ul>
+</div>
