@@ -1,25 +1,24 @@
 This a Yle News site template that allows users to test their applications in genuine environment.
 
-################
-# REQUIREMENTS #
-################
+# Author
+
+
+# Requirements
 
 - Web server (for example Apache)
 - PHP
 
-#########
-# USAGE #
-#########
+# Usage
 
 - Clone the project.
 - Create a virtual host that points to the cloned folder.
 - Browse to your virtual host. For example http://yle.dev/
 
-##################
-# Example set up #
-##################
+# Example set up
 
-# Apache Virtual host set up:
+This section describes shortly an example set up.
+
+# Apache Virtual host set up
 
 <VirtualHost *:80>
   DocumentRoot "/Users/teelmo/Documents/Yle"
@@ -39,15 +38,13 @@ This a Yle News site template that allows users to test their applications in ge
 
 127.0.0.1       yle.dev
 
-###################
-# Example project #
-###################
+# Example project 
 
-# New projects go to individual folders and can be accessed via browser:
+New projects go to individual folders and can be accessed via browser:
 
 http://yle.dev/?f={folder}
 
-# For example
+For example
 
 http://yle.dev/?f=case-2013/Esi-template
 
