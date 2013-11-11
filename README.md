@@ -1,4 +1,4 @@
-yle-uutiset
+Yle Uutiset
 ===========
 
 Yle Uutiset Applications
