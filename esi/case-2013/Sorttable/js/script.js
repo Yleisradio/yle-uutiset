@@ -1,5 +1,4 @@
-var ylePath = 'case-2013/Ennatyskalasaaliit/';
-//var ylePath = 'http://yle.fi/embed/2013/11_ennatyskalasaaliit/';
+var ylePath = 'case-2013/Sorttable/';
 
 var yleApp = {
   formatNr: function (x) {
@@ -23,7 +22,7 @@ var yleApp = {
   },
   initTable: function () {
     // @See https://code.google.com/p/jquerycsvtotable/
-    $('.table_container', '#esi-vis').CSVToTable(ylePath + 'data/data.csv', { 
+    $('.table_container', '#esi-vis').CSVToTable(ylePath + 'data/example_data.csv', { 
       loadingImage:ylePath + 'img/ajax-loader.gif', 
       loadingText:'',
       tbodyClass:'list',
