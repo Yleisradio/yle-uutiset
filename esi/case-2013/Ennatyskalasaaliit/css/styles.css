@@ -1,0 +1,71 @@
+/* For old browsers */
+#esi-vis {
+  display: block;
+}
+/* Some block styles */
+.article .content > header {
+  position: relative;
+  z-index: 2;
+}
+.article .content > .text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Table styles */
+#esi-vis .table th {
+  padding: 0 3px;
+}
+#esi-vis .search_container {
+  margin-bottom: 10px;
+}
+#esi-vis .search {
+  width: 200px;
+}
+.article #container > .content > .text #esi-vis th,
+.article #container > .content > .text #esi-vis tbody {
+  border: 0;
+}
+.article #container > .content > .text #esi-vis tbody tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+.article #container > .content > .text #esi-vis thead tr,
+.article #container > .content > .text #esi-vis thead tr:hover,
+.article #container > .content > .text #esi-vis tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+.article #container > .content > .text #esi-vis thead th,
+.article #container > .content > .text #esi-vis tbody td {
+  border: 0;
+  padding: 6px 4px 6px 3px;
+}
+.article #container > .content > .text #esi-vis tbody td {
+  vertical-align: middle;
+}
+
+/* Table sorting styles */
+#esi-vis th span {
+  background: url(../img/toggle.svg) no-repeat 100% 50%;
+  cursor: pointer;
+  padding-right: 15px;
+}
+#esi-vis span.asc,
+#esi-vis span.desc {
+  color: #219dd1;
+  padding-right: 15px;
+}
+#esi-vis span.asc {
+  background: url(../img/toggle_down.svg) no-repeat 100% 50%;
+}
+#esi-vis span.desc {
+  background: url(../img/toggle_up.svg) no-repeat 100% 50%;
+}
+
+/* General styles */
+#esi-vis .hidden {
+  display: none;
+}
+#esi-vis .column-1,
+#esi-vis .column-2 {
+  text-align: right;
+}
