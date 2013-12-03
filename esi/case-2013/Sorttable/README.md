@@ -5,3 +5,8 @@ Template of a sorting table.
 ## Author
 
 Teemo Tebest (Yle), @teelmo @IRCnet
+
+## Used libraries
+
+* <a href="https://code.google.com/p/jquerycsvtotable/" target="_blank">jquery.csvToTable.js</a>
+* <a href="List.js" target="_blank">List.js</a>
