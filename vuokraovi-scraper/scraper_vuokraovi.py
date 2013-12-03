@@ -24,7 +24,7 @@
 # USAGE
 #######
 
-# python scraper_etuovi.py [start_page] [end_page]
+# python scraper_vuokraovi.py [start_page] [end_page]
 
 # See:
 # - http://www.vuokraovi.com/vuokra-asunnot

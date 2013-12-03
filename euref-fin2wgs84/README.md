@@ -1,4 +1,22 @@
-Usage
-========
+This Python script can be used to change EUREF-FIN geographical coordinates to WGS84 degree coordinates.
 
-This script is not meant to work as it is but you may need to modify it to work with your data.
+You need to change the code to get the script to work for your data.
+
+## Author
+
+Teemo Tebest (Yle), @teelmo @IRCnet
+
+## USAGE
+
+python python euref-fin2wgs84.py
+
+## Required libraries
+
+- pymongo
+- BeautifulSoup
+- csv
+- urllib
+
+## LICENSE
+
+CC-BY-SA 3.0

@@ -1,4 +1,20 @@
-Usage
-========
+Python script for fetching social media share counts from sharedcount.com.
 
-This script is not meant to work as it is but you may need to modify it to work with your data.
+## Author
+
+Teemo Tebest (Yle), @teelmo @IRCnet
+
+## USAGE
+
+python sharedcount.py
+
+## Required libraries
+
+- pymongo
+- json
+- csv
+- urllib
+
+## LICENSE
+
+CC-BY-SA 3.0
