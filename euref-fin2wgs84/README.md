@@ -8,7 +8,7 @@ Teemo Tebest (Yle), @teelmo @IRCnet
 
 ## USAGE
 
-python python euref-fin2wgs84.py
+python euref-fin2wgs84.py
 
 ## Required libraries
 
