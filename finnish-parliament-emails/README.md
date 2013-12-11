@@ -1,4 +1,4 @@
-This Python script can be used to fetch Finnish parliament member's emails.
+This Python script can be used to fetch Finnish parliament member's email addresses.
 
 ## Author
 

@@ -6,7 +6,7 @@
 # ABOUT
 #######
 
-# Script for scraping Finnish parliament members emails.
+# Script for scraping Finnish parliament members email addresses.
 
 ########
 # AUTHOR
