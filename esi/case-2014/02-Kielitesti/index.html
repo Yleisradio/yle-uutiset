@@ -1,0 +1,40 @@
+<!--[if lt IE 8]><link rel="stylesheet" href="http://yle.fi/embed/2014/02_kielitesti/css/styles_lt_ie8.css" /><![endif]-->
+<figure id="esi-vis" class="esi-vis">
+  <div class="questions"></div>
+  <div class="age_container">
+    <h3>Kerro vielä ikäsi</h3>
+    <div class="answer"><label><input type="radio" name="age" class="age required" value="alle 29-vuotias"> <span class="label">Alle 30-vuotias</span></label></div>
+    <div class="answer"><label><input type="radio" name="age" class="age required" value="30–44 -vuotias"> <span class="label">30–44-vuotias</span></label></div>
+    <div class="answer"><label><input type="radio" name="age" class="age required" value="45–59 -vuotias"> <span class="label">45–59-vuotias</span></label></div>
+    <div class="answer"><label><input type="radio" name="age" class="age required" value="yli 60-vuotias"> <span class="label">Yli 60-vuotias</span></label></div>
+    <div class="answer"><label><input type="radio" name="age" class="age required" value="en halua vastata"> <span class="label">En halua vastata</span></label></div>
+  </div>
+  <div class="hidden">
+    <form action="https://docs.google.com/forms/d/1-IDWDsNz4CCW_eDKNGCMG4v7PQmIaQ2DNwy1Dv0DtLs/formResponse?embedded=true" method="POST" target="hidden_iframe" onsubmit="yleApp.submit();" class="esi_form">
+      <!-- Ikä -->
+      <input type="text" name="entry.1083770188" value="" />
+      <!-- Vastaukset -->
+      <input type="text" name="entry.1421273224" value="" />
+      <input type="hidden" name="draftResponse" value="[]" />
+      <input type="hidden" name="pageHistory" value="0" />
+    </form>
+  </div>
+  <div id="esi-results"></div>
+  <div class="result_container hidden">
+    <div class="result"></div>
+    <div class="share">Jaa tuloksesi <a href="" class="facebook">Facebookissa</a> tai <a href="" class="twitter" target="_blank">Twitterissä</a>.</div>
+  </div>
+  <div class="ss-terms">
+    <br>
+    <span class="disclaimer-msg">Vastaukset tallennetaan käyttäen Google Form -työkalua</span>
+    <br>
+    <a href="http://www.google.com/accounts/TOS">Käyttöehdot</a>
+    –
+    <a href="http://www.google.com/google-d-s/terms.html">Lisäehdot</a>
+  </div>
+  <!--figcaption>
+    <span class="caption"></span><span class="source"></a></span>
+  </figcaption-->
+  <iframe name="hidden_iframe" class="hidden"></iframe>
+  <!--iframe src="https://docs.google.com/forms/d/1-IDWDsNz4CCW_eDKNGCMG4v7PQmIaQ2DNwy1Dv0DtLs/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe-->
+</figure>

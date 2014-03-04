@@ -1,0 +1,10 @@
+.article #container>.content>.text #esi-inquiry .correct img.indicator {
+  display: inline;
+  margin-top: -20px;
+  position: absolute;
+}
+.article #container>.content>.text #esi-inquiry .incorrect img.indicator {
+  display: inline;
+  margin-top: -15px;
+  position: absolute;
+}
