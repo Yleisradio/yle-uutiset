@@ -8,8 +8,7 @@
 # LISENCE
 #########
 
-# http://creativecommons.org/licenses/by-sa/3.0/
-# CC-BY-SA (Teemo Tebest, @teelmo, teelmo.info)
+# CC-BY-SA 4.0 Yle Uutiset / Teemo Tebest
 
 #######
 # USAGE

@@ -19,4 +19,4 @@ python ykj2wgs84.py
 
 ## LICENSE
 
-CC-BY-SA 3.0
+CC-BY-SA 4.0 Yle Uutiset / Teemo Tebest

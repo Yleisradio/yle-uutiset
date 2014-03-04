@@ -21,4 +21,4 @@ http://datajournalismi.blogspot.com/2013/10/social-network-analysis-of-ones.html
 
 ## LICENSE
 
-CC-BY-SA 4.0
+CC-BY-SA 4.0 Yle Uutiset / Teemo Tebest

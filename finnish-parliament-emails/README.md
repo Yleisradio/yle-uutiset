@@ -21,4 +21,4 @@ http://www.eduskunta.fi/triphome/bin/hex3000.sh
 
 ## LICENSE
 
-CC-BY-SA 4.0
+CC-BY-SA 4.0 Yle Uutiset / Teemo Tebest

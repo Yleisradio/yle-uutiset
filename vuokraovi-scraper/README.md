@@ -17,4 +17,4 @@ python scraper_vuokraovi.py [start_page] [end_page]
 
 ## LICENSE
 
-CC-BY-SA 3.0
+CC-BY-SA 4.0 Yle Uutiset / Teemo Tebest
