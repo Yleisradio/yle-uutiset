@@ -50,4 +50,3 @@ http://yle.dev/?f={folder}
 **For example**
 
 http://yle.dev/?f=case-2013/Esi-template
-
