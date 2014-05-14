@@ -14,7 +14,7 @@
 # USAGE
 #######
 
-# python facebook_network.py [filename] ({use_existing = True|False})
+# python facebook_network.py {filename} ({use_existing = True|False})
 
 # See:
 # - https://m.facebook.com/friends/?id=764732976
@@ -63,7 +63,7 @@
 import sys
 # Check that a source file was given.
 if len(sys.argv) < 2:
-  print("\033[1mProvide a filename with Facebook profile URIs.\033[0m\nUsage \"python facebook_network.py [filename] ({use_existing})\"")
+  print("\033[1mProvide a filename with Facebook profile URIs.\033[0m\nUsage \"python facebook_network.py {filename} ({use_existing})\"")
   exit()
 
 if len(sys.argv) == 3:
@@ -92,7 +92,7 @@ import time
 # Initialize MongoDB
 from pymongo import Connection
 connection = Connection('localhost', 27017)
-db = connection.spotlight_network
+db = connection.facebook_friends
 users = db.users
 connections = db.connections
 
@@ -175,8 +175,8 @@ for line in input_file:
           if users.find({"data.username": fusername}).count():
             users.remove({"fuid": fusername})
             print "Removed old data for %s friends" % fusername
+          users.insert({"fuid": user.id, "data": dict(user)})
           print line_num_str + ". " + user.name + " \033[1m***Added to DB***\033[0m"
-          users.insert({"fuid": user.id, "data": user})
         else:
           print "\033[1m******ERROR! Incorrect Facebook username***\033[0m\n" + line_num_str + ". " + line
           error.append(line_num_str + ". " + line)
