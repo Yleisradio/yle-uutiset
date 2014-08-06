@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Yle Autostart
+Exec=/home/yle/Desktop/run.sh
+Type=Application
+Terminal=false
