@@ -20,7 +20,7 @@
 # USAGE
 #######
 
-# python euref-fin2wgs84.py
+# python euref-fin2wgs84.py [filename]
 
 # See:
 #  - http://kansalaisen.karttapaikka.fi/kartanhaku/osoitehaku.html?lang=fi
@@ -29,6 +29,9 @@
 #################
 # VERSION HISTORY
 #################
+
+# Version 1.2
+# - Added filename argument.
 
 # Version 1.1
 # - Added mongodb functionality for caching results.
@@ -58,16 +61,23 @@ from pymongo import Connection
 connection = Connection('localhost', 27017)
 
 db = connection.gis
-coordinates = db.euref_fin2wgs84_sillat
+coordinates = db.euref_fin2wgs84
 
-export = 'false'
 # Export is done with mongoexport.
-# mongoexport --db gis --collection kkj2wgs84_sillat --csv -f NUMERO,NIMI,TIE,OSA,ETAISYYS,P,I,north_wgs84,east_wgs84 >> data_wgs84.csv
+export = 'false'
+# mongoexport --db gis --collection euref_fin2wgs84 --csv -f north_wgs84,east_wgs84 >> data_wgs84.csv
+
+# Read arguments.
+if len(sys.argv) < 2:
+  print("\033[1mProvide a file name.\033[0m\nUsage \"python convert.py [filename]\"")
+  exit()
+else:
+  filename = sys.argv[1]
 
 # Go through the data only if we are not exporting.
 if export == 'false':
   # Read example_data.csv
-  with open('example_data.csv', 'rb') as csvfile:
+  with open(filename, 'rb') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',', quotechar='"')
     row_number = 0
     column_names = []
@@ -79,8 +89,8 @@ if export == 'false':
           column_names.append(column_name)
         continue
      
-      # Create an unique bridge_id from bridge number. 
-      bridge_id = row[0]
+      # Create an unique row_id from row id. 
+      row_id = row[0]
 
       ii = 0
       data = {}
@@ -90,14 +100,14 @@ if export == 'false':
         ii = ii + 1
 
       # Set up and store the new data values.
-      data['bridge_id'] = bridge_id
+      data['row_id'] = row_id
       data['north_wgs84'] = '0.0'
       data['east_wgs84'] = '0.0'
 
       # Check if data already is available in database.
-      if coordinates.find({'bridge_id': bridge_id}).count() == 1:
+      if coordinates.find({'row_id': row_id}).count() == 1:
         # Use the data available in the database.
-        for values in coordinates.find({'bridge_id': bridge_id}):
+        for values in coordinates.find({'row_id': row_id}):
           data['east_wgs84'] = values['east_wgs84']
           data['north_wgs84'] = values['north_wgs84']
         # Print out what we are doing.
@@ -106,14 +116,12 @@ if export == 'false':
       # Otherwise we need to fetch the data from the API.
       else:
         # Remove any existing contents, just to be safe.
-        coordinates.remove({'bridge_id': bridge_id})
+        coordinates.remove({'row_id': row_id})
         # Store coordinates.
-        north = row[5]
-        east = row[6]
+        north = row[14]
+        east = row[13]
         # If we have valid data get wgs84 values from Luomus API.
         if north != '0' and east != '0':
-          # Fetch XML document
-          url = 'http://www.luomus.fi/projects/coordinateservice/?orig_system=ykj&north=' + north + '&east=' + east
           # Fetch HTML document.
           url = 'http://kansalaisen.karttapaikka.fi/koordinaatit/muunnos.html?x=' + east + '&y=' +  north + '&srsName=EPSG%3A3067&lang=fi'
           # Parse HTML document.
