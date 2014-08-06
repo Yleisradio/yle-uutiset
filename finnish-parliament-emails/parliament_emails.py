@@ -125,9 +125,13 @@ for parliament_member in table.find({'email': ''}):
   try:
     # Update the existing database record
     # with the new data we've fetched.
+
+    if email == False:
+      email = ''
+
     table.update({'name':parliament_member['name']}, {
       '$set': {
-        'clean_name': clean_name,
+        'clean_name': clean_name.replace('&Auml;', 'Ä').replace('&auml;', 'ä').replace('&ouml;', 'ö').replace('&Ouml;', 'Ö').replace('[at]', 'é'),
         'party': party,
         'email': email.text.replace('[at]', '@')
       }
