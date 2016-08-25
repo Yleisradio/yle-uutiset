@@ -53,3 +53,11 @@ $dir = "/opt/local/apache2/htdocs/astud_eukysely";
 Erkki Vihtonen, Yle
 
 Sanna Rönnblad, Yle
+
+## Lisenssi
+
+Kaikki oikeudet pidätetään.
+
+## Lisätiedot
+
+Teemo Tebest, teemo.tebest@yle.fi
