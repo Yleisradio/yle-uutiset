@@ -31,6 +31,9 @@
 # VERSION HISTORY
 #################
 
+# Version 2.0
+# - Second version. Now uses static urls.
+
 # Version 1.0
 # - Initial version.
 
