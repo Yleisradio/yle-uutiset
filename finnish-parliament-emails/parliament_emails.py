@@ -27,6 +27,7 @@
 # python parliament_email.py
 
 # See: https://www.eduskunta.fi/FI/kansanedustajat/Sivut/Kansanedustajat-aakkosjarjestyksessa.aspx
+
 #################
 # VERSION HISTORY
 #################
@@ -43,8 +44,6 @@
 import requests
 # Import BeautifulSoup for handling html contents.
 from BeautifulSoup import BeautifulSoup
-# Import re for making regular experssions.
-import re
 # Import sys for reading arguments.
 import sys
 
