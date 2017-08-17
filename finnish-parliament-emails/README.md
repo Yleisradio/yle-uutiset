@@ -6,18 +6,16 @@ Teemo Tebest (Yle), @teelmo @IRCnet
 
 ## USAGE
 
-python parliament_emails.py {remove_existing = true|false}
+python parliament_emails.py
 
 ## See
 
-http://www.eduskunta.fi/triphome/bin/hex3000.sh
+https://www.eduskunta.fi/FI/kansanedustajat/Sivut/Kansanedustajat-aakkosjarjestyksessa.aspx
 
 ## Required libraries
 
-- pymongo
 - requests
 - BeautifulSoup
-- re
 
 ## LICENSE
 
