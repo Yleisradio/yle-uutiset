@@ -1,0 +1,26 @@
+language: python
+
+# Supported CPython versions:
+# https://en.wikipedia.org/wiki/CPython#Version_history
+python:
+ - 2.7
+ - 3.6
+ - 3.5
+ - 3.4
+
+sudo: false
+
+install:
+ - pip install pyflakes pycodestyle
+
+script:
+ # Static analysis: can fail the build
+ - pyflakes finnish-parliament-emails
+
+after_script:
+ # Static analysis: for info only, won't fail the build
+ - pyflakes .
+ - pycodestyle --statistics --count .
+
+matrix:
+  fast_finish: true
