@@ -16,6 +16,7 @@ install:
 script:
  # Static analysis: can fail the build
  - pyflakes finnish-parliament-emails
+ - pyflakes postcode-from-address
 
 after_script:
  # Static analysis: for info only, won't fail the build

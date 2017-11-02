@@ -63,14 +63,17 @@ with open('data.csv', 'r') as csv_file:
         if city == 'Helsingfors':
             city = 'Helsinki'
 
-        url = 'http://www.verkkoposti.com/e3/postinumeroluettelo?streetname=' + address + '&postcodeorcommune=' + city
+        url = ('http://www.verkkoposti.com/e3/postinumeroluettelo?streetname=' +
+               address + '&postcodeorcommune=' + city)
         print('\033[1mSeeking:\033[0m ' + address + ', ' + city)
         # print('\033[1mUrl:\033[0m ' + url)
-        html = requests.get(url, cookies={}, data={'streetname':address, 'postcodeorcommune':city})
+        html = requests.get(url, cookies={}, data={
+          'streetname': address, 'postcodeorcommune': city})
 
         parsed_html = BeautifulSoup(html.text, 'lxml')
         try:
-            table_rows = parsed_html.find('table', {'class':'hidden-xs'}).findAll('tr')
+            table_rows = parsed_html.find(
+              'table', {'class': 'hidden-xs'}).findAll('tr')
             if len(table_rows) == 2:
                 table_cell = table_rows[1].findAll('td')[2]
                 found = re.search('([0-9]{5})', table_cell.text).group(1)
@@ -89,4 +92,5 @@ with open('data.csv', 'r') as csv_file:
                 # break
 
     print('\n' + str(founds))
-    print('\n\033[1mAll done. Total of ' + str(index) + ' records. Enjoy!\033[0m')
+    print('\n\033[1mAll done. Total of ' + str(index) +
+          ' records. Enjoy!\033[0m')
