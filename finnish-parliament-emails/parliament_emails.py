@@ -40,10 +40,12 @@
 
 #############################################################
 
+# Python 2/3 compatible print
+from __future__ import print_function
 # Import requests for making http requests.
 import requests
 # Import BeautifulSoup for handling html contents.
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 # Scraped from https://www.eduskunta.fi/FI/kansanedustajat/Sivut/Kansanedustajat-aakkosjarjestyksessa.aspx
 urls = ['https://www.eduskunta.fi/FI/kansanedustajat/Sivut/1346.aspx',
@@ -245,11 +247,12 @@ urls = ['https://www.eduskunta.fi/FI/kansanedustajat/Sivut/1346.aspx',
         'https://www.eduskunta.fi/FI/kansanedustajat/Sivut/1136.aspx',
         'https://www.eduskunta.fi/FI/kansanedustajat/Sivut/1332.aspx',
         'https://www.eduskunta.fi/FI/kansanedustajat/Sivut/301.aspx',
-        'https://www.eduskunta.fi/FI/kansanedustajat/Sivut/1141.aspx']
+        'https://www.eduskunta.fi/FI/kansanedustajat/Sivut/1141.aspx',
+        ]
 
 for url in urls:
     html = requests.get(url)
-    parsed_html = BeautifulSoup(html.text)
+    parsed_html = BeautifulSoup(html.text, "lxml")
     email = parsed_html.find('table', {'class': 'mopPersonTable'}).findAll(
         'td', {'class': 'mopDataData'})[2].find('a')
-    print email
+    print(email)
