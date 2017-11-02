@@ -42,6 +42,7 @@
 
 # Python 2/3 compatible print
 from __future__ import print_function
+
 # Import requests for making http requests.
 import requests
 # Import BeautifulSoup for handling html contents.
