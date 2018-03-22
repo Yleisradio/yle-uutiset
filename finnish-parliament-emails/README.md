@@ -14,8 +14,9 @@ https://www.eduskunta.fi/FI/kansanedustajat/Sivut/Kansanedustajat-aakkosjarjesty
 
 ## Required libraries
 
+- BeautifulSoup4
+- lxml
 - requests
-- BeautifulSoup
 
 ## LICENSE
 
