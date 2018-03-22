@@ -1,3 +1,5 @@
+# This script is deprecated.
+
 This Python script can be used to form a .gexf network file from a given list of Facebook profiles.
 
 ## Author
