@@ -10,10 +10,11 @@ python postcode_from_address.py
 
 ## Required libraries
 
-- requests
-- BeautifulSoup
-- re
+- BeautifulSoup4
 - csv
+- lxml
+- re
+- requests
 - time
 
 ## LICENSE
